@@ -1,0 +1,501 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    position: fixed;
+    z-index: 3;
+    background-color: rgb(31,155,144);
+    padding: 5px 10px;
+    width: 100vw;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    max-width: 1440px;
+}
+
+.dumpdays-logo {
+    margin: 15px 30px;
+    height: 25px;
+    width: 100px;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation-link {
+    margin: 15px 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.navigation-button {
+    background-color: rgb(47,206,193);
+    color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 40%;
+    border: 2px solid rgb(47,206,193);
+    box-shadow: 0 0 10px grey;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: inline-block;
+    margin: 15px 30px;
+    height: 25px;
+    width: 25px;
+}
+
+.main-sponsors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin: auto;
+}
+
+.main-header {
+    margin-top: 80px;
+    margin-left: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+    align-self: flex-start;
+}
+
+.general-sponsor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    width: 50vw;
+}
+
+.rimac-photo {
+    display: flex;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-images {
+    position: relative;
+    height: 75%;
+    width: 100%;
+}
+
+.rimac-photo.first {
+    position: absolute;
+    opacity: 1;
+    animation: firstPhoto 30s ease infinite;
+}
+
+.rimac-photo.second {
+    position: absolute;
+    opacity: 1;
+    animation: secondPhoto 30s ease infinite;
+}
+
+.rimac-photo.third {
+    position: absolute;
+    opacity: 1;
+    animation: thirdPhoto 30s ease infinite;
+
+}
+
+.rimac-photo.fourth {
+    opacity: 1;
+    animation: fourthPhoto 30s ease infinite;
+}
+
+.animation-lines {
+    position: absolute;
+    left: -40px;
+    display: none;
+    height: 3px;
+    width: 200px;
+}
+
+.line1,
+.line2,
+.line3,
+.line4 {
+    width: 10px;
+    background-color: rgb(31,155,144);
+    padding-right: 10px;
+    opacity: 0.2;
+}
+
+.line1 {
+    animation: firstLine 30s ease infinite;
+}
+
+.line2 {
+    animation: secondLine 30s ease infinite;
+}
+
+.line3 {
+    animation: thirdLine 30s ease infinite;
+}
+
+.line4 {
+    animation: fourthLine 30s ease infinite;
+}
+
+
+.general-slider {
+    position: relative;
+}
+
+.general-sponsor-box {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(47,206,193);
+    width: 50%;
+    box-shadow: 0 0 10px lightgrey;
+}
+
+.general-box-header1 {
+    margin-left: 10px;
+    color: white;
+    font-weight: bolder;
+}
+
+.general-box-header2 {
+    margin-left: 10px;
+    margin-top: -15px;
+    color: black;
+    font-weight: bolder;
+}
+
+.general-sponsor-description,
+.gold-sponsor-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px lightgrey;
+    width: 100%;
+    margin-top: -20px;
+}
+
+.general-logo {
+    margin-top: -30px;
+    margin-left: -45px;
+    height: 200px;
+    width: 200px;
+    align-self: flex-start;
+}
+
+.general-paragraph,
+.gold-paragraph {
+    margin-top: -50px;
+    padding-left: 10px;
+    font-size: 15px;
+    color: slategray;
+}
+
+.gold-sponsor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    margin-bottom: 80px;
+}
+
+.gold-sponsor-box {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    box-shadow: 0 0 10px lightgrey;
+    background-color: rgb(43,56,63);
+}
+
+.gold-box-header1 {
+    margin-left: 10px;
+    color: white;
+    font-weight: bolder;
+}
+
+.gold-box-header2 {
+    margin-left: 10px;
+    margin-top: -15px;
+    color: rgb(47,206,193);
+    font-weight: bolder;
+}
+
+.reverse-logo {
+    align-self: flex-end;
+    margin-right: -40px;
+}
+
+.reverse-box {
+    left: -20px;
+}
+
+.other-sponsors {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30px 100px;
+}
+
+.silver-container {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80vw;
+    max-width: 900px;
+}
+
+.silver-logo {
+    height: 45px;
+    width: 150px;
+    margin: 30px 15px;
+}
+
+.media {
+    display: inline-block;
+}
+
+.friends {
+    display: inline-block;
+}
+
+@keyframes fourthPhoto {
+    from {
+        opacity: 0.5;
+    }
+    5% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes thirdPhoto {
+    from {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    27% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes secondPhoto {
+    from {
+        opacity: 0;
+    }
+    47% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    73% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes firstPhoto {
+    from {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fourthLine{
+    from {
+        opacity: 0.2;
+    }
+    75% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+
+@keyframes thirdLine {
+    from {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+    73% {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+
+@keyframes secondLine {
+    from {
+        opacity: 0.2;
+    }
+    27% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+
+@keyframes firstLine {
+    from {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .menu-icon {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .gold-sponsor,
+    .general-sponsor {
+        align-items: flex-start;
+    }
+
+    .general-sponsor {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .general-sponsor {
+        align-items: flex-start;
+        max-width: 1000px;
+        width: 70vw;
+        margin-bottom: 100px;
+    }
+
+    .general-sponsor-description {
+        width: 600px;
+        margin-top: 50px;
+    }
+
+    .rimac-photo {
+        width: 300px;
+    }
+
+    .general-sponsor-box {
+        right: 0;
+        bottom: -60px;
+    }
+
+    .general-paragraph,
+    .gold-paragraph {
+        font-size: 10px;
+    }
+
+    .gold-sponsor:nth-child(2) {
+        margin-left: 400px;
+        margin-top: -200px;
+    }
+
+    .gold-sponsor:nth-child(3) {
+        margin-top: -200px;
+    }
+
+    .gold-sponsor-description {
+        width: 60%;
+        max-width: 300px;
+    }
+    
+    .animation-lines {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    .general-paragraph,
+    .gold-paragraph {
+        font-size: 15px;
+    }
+
+    .gold-sponsor:nth-child(2) {
+        margin-left: 550px;
+        margin-top: -350px;
+    }
+
+    .gold-sponsor:nth-child(3) {
+        margin-top: -350px;
+    }
+    .gold-sponsor {
+        max-width: 1000px;
+    }
+    .gold-sponsor-description {
+        max-width: 500px;
+    }
+
+    .rimac-photo {
+        width: 500px;
+    }
+
+    .animation-lines {
+        left: 0;
+    }
+}
+

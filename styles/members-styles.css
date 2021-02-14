@@ -1,0 +1,297 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.current {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 320px;
+}
+
+.members-header {
+  font-size: 300%;
+}
+
+.member-photo {
+  height: 120px;
+  width: 120px;
+  margin: 30px;
+  border-radius: 15%;
+}
+
+.member-description {
+  position: absolute;
+  z-index: 2;
+  display: none;
+  margin-left: -50px;
+  width: 300px;
+  background-color: rgb(40,46,48);
+  color: white;
+  border-radius: 5%;
+}
+
+.arrow {
+  margin-left: 120px;
+  margin-top: -15px;
+  width: 0px; 
+  height: 0px; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid rgb(40,46,48);
+}
+
+.member-name {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.member-mail {
+  display: flex;
+  margin-left: 10px;
+}
+
+.at-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.mail-address {
+  padding-left: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+
+.about-member {
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 5px;
+  color: rgb(107,116,117);
+}
+
+.member-photo:hover {
+  position: relative;
+  right: 10px;
+  bottom: 10px;
+  height: 140px;
+  width: 140px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: height, width 0s;
+}
+
+.member-photo:hover ~ .member-description {
+  display: block;
+}
+
+.alumni {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 750px;
+}
+
+.alumni-header {
+  margin: 40px 0px;
+  color: rgb(166, 176, 177);
+}
+
+.alumni-photo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.alumni-description {
+  position: absolute;
+  margin-top: -5px;
+  margin-left: 5px;
+  z-index: 2;
+  display: none;
+  padding: 3px 3px;
+  background-color: rgb(40,46,48);
+  border-radius: 5%;
+}
+
+.alumni_member-name {
+  font-size: 10px;
+  color: white;
+}
+
+.alumni-photo:hover {
+  transform: scale(1.5);
+}
+
+.alumni-photo:hover ~ .alumni-description {
+  display: block;
+}
+
+.whitespace {
+  height: 100px;
+}
+
+@media screen and (min-width: 390px) and (max-width: 599px) {
+
+  .current {
+    max-width: 400px;
+  }
+  .member-description {
+    margin-left: 20px;
+  }
+
+  .arrow {
+    margin-left: 40px;
+  }
+
+  .member:nth-child(2n) > .member-description {
+    margin-left: -140px;
+  }
+
+  .member:nth-child(2n) > .member-description > .arrow {
+    margin-left: 200px;
+  }
+
+  .member:nth-child(17) >.member-description {
+    margin-left: -50px;
+  }
+
+  .member:nth-child(17) > .member-description > .arrow {
+    margin-left: 120px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 769px) {
+
+  .current {
+    max-width: 650px;
+  }
+
+  .member-description {
+    margin-left: 20px;
+  }
+
+  .arrow {
+    margin-left: 40px;
+  }
+
+  .member:nth-child(3n) > .member-description {
+    margin-left: -140px;
+  }
+
+  .member:nth-child(3n) > .member-description > .arrow {
+    margin-left: 200px;
+  }
+
+  .member:nth-child(17) >.member-description {
+    margin-left: -140px;
+  }
+
+  .member:nth-child(17) > .member-description > .arrow {
+    margin-left: 200px;
+  }
+}
+
+@media screen and (min-width: 770px) and (max-width: 929px) {
+
+  .current {
+    max-width: 850px;
+  }
+
+  .member-description {
+    margin-left: 20px;
+  }
+
+  .arrow {
+    margin-left: 40px;
+  }
+  
+  .member:nth-child(4n) > .member-description {
+    margin-left: -140px;
+  }
+
+  .member:nth-child(4n) > .member-description > .arrow {
+    margin-left: 200px;
+  }
+
+  .member:nth-child(17) >.member-description {
+    margin-left: -50px;
+  }
+
+  .member:nth-child(17) > .member-description > .arrow {
+    margin-left: 120px;
+  }
+}
+
+@media screen and (min-width:930px) and (max-width:1300px) {
+
+  .current {
+    max-width: 1050px;
+  }
+
+  .member-description {
+    margin-left: 20px;
+  }
+
+  .arrow {
+    margin-left: 40px;
+  }
+  
+  .member:nth-child(5n) > .member-description {
+    margin-left: -140px;
+  }
+
+  .member:nth-child(5n) > .member-description > .arrow {
+    margin-left: 200px;
+  }
+
+  .member:nth-child(17) >.member-description {
+    margin-left: -140px;
+  }
+
+  .member:nth-child(17) > .member-description > .arrow {
+    margin-left: 200px;
+  }
+}
+
+@media screen and (min-width:1301px) {
+  
+  .current {
+    max-width: 1200px;
+  }
+
+  .member-description {
+    margin-left: 20px;
+  }
+
+  .arrow {
+    margin-left: 40px;
+  }
+  
+  .member:nth-child(6n) > .member-description {
+    margin-left: -140px;
+  }
+
+  .member:nth-child(6n) > .member-description > .arrow {
+    margin-left: 200px;
+  }
+
+  .member:nth-child(17) >.member-description {
+    margin-left: -140px;
+  }
+
+  .member:nth-child(17) > .member-description > .arrow {
+    margin-left: 200px;
+  }
+}
